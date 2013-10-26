@@ -6,4 +6,13 @@ exports.config =
     stylesheets:
       joinTo: 'app.css'
     templates:
-      joinTo: 'app.js'
+      joinTo: 
+      	'js/templates.js': /.+\.jade$/
+
+
+  plugins:
+    jade:
+      options:          # can be added all the supported jade options
+        pretty: yes     # Adds pretty-indentation whitespaces to output (false by default)
+    static_jade:                        # all optionals
+      path:       [ /app/ ]  # static-compile each file in this directories
